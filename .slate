@@ -1,0 +1,49 @@
+## Config
+config defaultToCurrentScreen true
+
+
+## Slate listener key
+alias HULK_SMASH ctrl;alt
+alias HULK_SUPER_SMASH ctrl;alt;cmd
+
+
+## Common positions
+alias full  move screenOriginX;screenOriginY screenSizeX;screenSizeY
+
+alias left-half    move screenOriginX;screenOriginY               screenSizeX/2;screenSizeY
+alias right-half   move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
+alias top-half     move screenOriginX;screenOriginY               screenSizeX;screenSizeY/2
+alias bottom-half  move screenOriginX;screenOriginY+screenSizeY/2 screenSizeX;screenSizeY/2
+
+alias top-left      move screenOriginX;screenOriginY                             screenSizeX/2;screenSizeY/2
+alias top-right     move screenOriginX+screenSizeX/2;screenOriginY               screenSizeX/2;screenSizeY/2
+alias bottom-left   move screenOriginX;screenOriginY+screenSizeY/2               screenSizeX/2;screenSizeY/2
+alias bottom-right  move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2 screenSizeX/2;screenSizeY/2
+
+alias two-thirds-left   move screenOriginX;screenOriginY                 (screenSizeX/3)*2;screenSizeY
+alias two-thirds-right  move screenOriginX+(screenSizeX/3);screenOriginY (screenSizeX/3)*2;screenSizeY
+
+alias one-third-left    move screenOriginX;screenOriginY                   screenSizeX/3;screenSizeY
+alias one-third-middle  move screenOriginX+screenSizeX/3;screenOriginY     screenSizeX/3;screenSizeY
+alias one-third-right   move screenOriginX+(screenSizeX/3)*2;screenOriginY screenSizeX/3;screenSizeY
+
+
+## Key bindings
+bind x:${HULK_SMASH} ${full}
+
+bind left:${HULK_SMASH}  ${left-half}
+bind right:${HULK_SMASH} ${right-half}
+bind up:${HULK_SMASH}    ${top-half}
+bind down:${HULK_SMASH}  ${bottom-half}
+
+bind i:${HULK_SMASH} ${top-left}
+bind o:${HULK_SMASH} ${top-right}
+bind k:${HULK_SMASH} ${bottom-left}
+bind l:${HULK_SMASH} ${bottom-right}
+
+bind ,:${HULK_SMASH} ${two-thirds-left}
+bind .:${HULK_SMASH} ${two-thirds-right}
+
+bind ,:${HULK_SUPER_SMASH} ${one-third-left}
+bind .:${HULK_SUPER_SMASH} ${one-third-middle}
+bind /:${HULK_SUPER_SMASH} ${one-third-right}
