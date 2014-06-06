@@ -20,8 +20,9 @@ alias top-right     move screenOriginX+screenSizeX/2;screenOriginY              
 alias bottom-left   move screenOriginX;screenOriginY+screenSizeY/2               screenSizeX/2;screenSizeY/2
 alias bottom-right  move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2 screenSizeX/2;screenSizeY/2
 
-alias two-thirds-left   move screenOriginX;screenOriginY                 (screenSizeX/3)*2;screenSizeY
-alias two-thirds-right  move screenOriginX+(screenSizeX/3);screenOriginY (screenSizeX/3)*2;screenSizeY
+alias two-thirds-left       move screenOriginX;screenOriginY                 (screenSizeX/3)*2;screenSizeY
+alias two-thirds-right      move screenOriginX+(screenSizeX/3);screenOriginY (screenSizeX/3)*2;screenSizeY
+alias two-thirds-top-right  move screenOriginX+(screenSizeX/3);screenOriginY (screenSizeX/3)*2;screenSizeY/2
 
 alias one-third-left    move screenOriginX;screenOriginY                   screenSizeX/3;screenSizeY
 alias one-third-middle  move screenOriginX+screenSizeX/3;screenOriginY     screenSizeX/3;screenSizeY
@@ -40,6 +41,7 @@ bind i:${HULK_SMASH} ${top-left}
 bind o:${HULK_SMASH} ${top-right}
 bind k:${HULK_SMASH} ${bottom-left}
 bind l:${HULK_SMASH} ${bottom-right}
+bind p:${HULK_SMASH} ${two-thirds-top-right}
 
 bind ,:${HULK_SMASH} ${two-thirds-left}
 bind .:${HULK_SMASH} ${two-thirds-right}
