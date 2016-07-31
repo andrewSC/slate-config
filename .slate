@@ -20,13 +20,17 @@ alias top-right     move screenOriginX+screenSizeX/2;screenOriginY              
 alias bottom-left   move screenOriginX;screenOriginY+screenSizeY/2               screenSizeX/2;screenSizeY/2
 alias bottom-right  move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2 screenSizeX/2;screenSizeY/2
 
-alias two-thirds-left       move screenOriginX;screenOriginY                 (screenSizeX/3)*2;screenSizeY
-alias two-thirds-right      move screenOriginX+(screenSizeX/3);screenOriginY (screenSizeX/3)*2;screenSizeY
-alias two-thirds-top-right  move screenOriginX+(screenSizeX/3);screenOriginY (screenSizeX/3)*2;screenSizeY/2
+alias two-thirds-left   move screenOriginX;screenOriginY                 (screenSizeX/3)*2;screenSizeY
+alias two-thirds-right  move screenOriginX+(screenSizeX/3);screenOriginY (screenSizeX/3)*2;screenSizeY
 
 alias one-third-left    move screenOriginX;screenOriginY                   screenSizeX/3;screenSizeY
 alias one-third-middle  move screenOriginX+screenSizeX/3;screenOriginY     screenSizeX/3;screenSizeY
 alias one-third-right   move screenOriginX+(screenSizeX/3)*2;screenOriginY screenSizeX/3;screenSizeY
+
+alias one-third-top-left      move screenOriginX;screenOriginY                                     screenSizeX/3;screenSizeY/3
+alias one-third-top-right     move screenOriginX+(screenSizeX/3)*2;screenOriginY                   screenSizeX/3;screenSizeY/3
+alias one-third-bottom-left   move screenOriginX;screenOriginY+(screenSizeY/3)*2                   screenSizeX/3;screenSizeY/3
+alias one-third-bottom-right  move screenOriginX+(screenSizeX/3)*2;screenOriginY+(screenSizeY/3)*2 screenSizeX/3;screenSizeY/3
 
 
 ## Key bindings
@@ -41,7 +45,6 @@ bind i:${HULK_SMASH} ${top-left}
 bind o:${HULK_SMASH} ${top-right}
 bind k:${HULK_SMASH} ${bottom-left}
 bind l:${HULK_SMASH} ${bottom-right}
-bind p:${HULK_SMASH} ${two-thirds-top-right}
 
 bind ,:${HULK_SMASH} ${two-thirds-left}
 bind .:${HULK_SMASH} ${two-thirds-right}
@@ -49,3 +52,8 @@ bind .:${HULK_SMASH} ${two-thirds-right}
 bind ,:${HULK_SUPER_SMASH} ${one-third-left}
 bind .:${HULK_SUPER_SMASH} ${one-third-middle}
 bind /:${HULK_SUPER_SMASH} ${one-third-right}
+
+bind i:${HULK_SUPER_SMASH} ${one-third-top-left}
+bind o:${HULK_SUPER_SMASH} ${one-third-top-right}
+bind k:${HULK_SUPER_SMASH} ${one-third-bottom-left}
+bind l:${HULK_SUPER_SMASH} ${one-third-bottom-right}
